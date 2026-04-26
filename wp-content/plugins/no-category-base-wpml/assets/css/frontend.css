@@ -1,0 +1,10 @@
+/**
+ * No Category Base (WPML) - Frontend Styles
+ * Category permalink accessibility and transition support.
+ */
+a.category-link,
+.cat-links a,
+.widget_categories a {
+    -webkit-text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}

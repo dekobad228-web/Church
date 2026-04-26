@@ -1,0 +1,2 @@
+<?php
+return ['x-generator'=>'GlotPress/4.0.3','translation-revision-date'=>'2025-11-27 19:26:48+0000','plural-forms'=>'nplurals=3; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : ((n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14)) ? 1 : 2);','project-id-version'=>'Plugins - No Category Base (WPML) - Stable (latest release)','language'=>'ru','messages'=>['No Category Base (WPML)'=>'No Category Base (WPML)','Removes \'/category\' from your category permalinks. WPML compatible.'=>'Удаляет \'/category\' из постоянных ссылок Ваших рубрик. Совместимо с WPML.']];

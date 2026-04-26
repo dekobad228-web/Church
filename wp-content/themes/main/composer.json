@@ -1,0 +1,16 @@
+{
+    "name": "deko/main",
+    "type": "project",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^7.0"
+    },
+    "require-dev": {
+        "kint-php/kint": "^6.1"
+    }
+}

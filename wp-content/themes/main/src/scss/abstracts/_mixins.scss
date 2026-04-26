@@ -1,0 +1,47 @@
+@use "sass:map";
+@use "variables" as var;
+@use "functions" as fn;
+
+@mixin themeBlock($map) {
+    @each $key, $value in $map {
+        --#{$key}: #{$value};
+    }
+}
+
+@mixin textFluid($preset, $weight: null, $line-height: null) {
+    $scale: map.get(var.$text-style, $preset);
+
+    @if($scale) {
+        $min: map.get($scale, min);
+        $max: map.get($scale, max);
+
+        font-size: fn.clampFluid($min, $max, 380, 1920);
+        line-height: $line-height or map.get($scale, line-height);
+        font-weight: $weight or map.get($scale, font-weight);
+    }
+
+    @else {
+        @warn "Отсутствует предустановка!";
+    }
+
+}
+
+@mixin hover {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (hover: none),
+    (hover: on-demand) {
+
+        &:active {
+            @content;
+        }
+    }
+}

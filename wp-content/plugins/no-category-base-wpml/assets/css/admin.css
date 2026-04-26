@@ -1,0 +1,185 @@
+/**
+ * No Category Base (WPML) — Admin CSS
+ */
+
+/* Wrap
+-------------------------------------------------------------- */
+.ncbw-admin-wrap h1 {
+	margin-bottom: 10px;
+}
+
+.ncbw-tab-content {
+	margin-top: 20px;
+}
+
+/* Card
+-------------------------------------------------------------- */
+.ncbw-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 20px 24px;
+	margin-bottom: 20px;
+	max-width: 860px;
+}
+
+.ncbw-card h2 {
+	margin-top: 0;
+	font-size: 16px;
+}
+
+/* Badge
+-------------------------------------------------------------- */
+.ncbw-badge {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 12px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	background: #e2e3e5;
+	color: #383d41;
+	border: 1px solid #d6d8db;
+}
+
+.ncbw-badge--active {
+	background: #d4edda;
+	color: #155724;
+	border-color: #c3e6cb;
+}
+
+/* Stat
+-------------------------------------------------------------- */
+.ncbw-stat {
+	font-size: 22px;
+	font-weight: 700;
+	color: #1d2327;
+}
+
+/* Upgrade Hero
+-------------------------------------------------------------- */
+.ncbw-upgrade-hero {
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: #fff;
+	border-radius: 8px;
+	padding: 30px 36px;
+	margin-bottom: 24px;
+	max-width: 860px;
+}
+
+.ncbw-upgrade-hero h2 {
+	margin-top: 0;
+	color: #fff;
+	font-size: 22px;
+}
+
+.ncbw-upgrade-hero p {
+	color: rgba(255,255,255,0.88);
+	font-size: 15px;
+	margin-bottom: 20px;
+}
+
+.ncbw-upgrade-hero .button-hero {
+	font-size: 15px;
+	padding: 8px 22px;
+	height: auto;
+	line-height: 1.6;
+}
+
+/* Features Grid
+-------------------------------------------------------------- */
+.ncbw-features-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	max-width: 860px;
+	margin-bottom: 24px;
+}
+
+.ncbw-feature-card {
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	padding: 18px 20px;
+	width: calc(50% - 8px);
+	min-width: 240px;
+	box-sizing: border-box;
+}
+
+.ncbw-feature-icon {
+	font-size: 22px;
+	display: block;
+	margin-bottom: 8px;
+}
+
+.ncbw-feature-card h3 {
+	margin: 0 0 6px;
+	font-size: 14px;
+}
+
+.ncbw-feature-card p {
+	color: #555;
+	font-size: 13px;
+	margin: 0;
+}
+
+/* Blurred Pro Content
+-------------------------------------------------------------- */
+.ncbw-blurred-wrap {
+	position: relative;
+	max-width: 860px;
+}
+
+.ncbw-blurred-content {
+	filter: blur(4px);
+	pointer-events: none;
+	user-select: none;
+	opacity: 0.7;
+}
+
+.ncbw-blurred-overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.ncbw-upgrade-cta {
+	background: #fff;
+	border: 2px solid #764ba2;
+	border-radius: 10px;
+	padding: 28px 36px;
+	text-align: center;
+	box-shadow: 0 8px 32px rgba(118,75,162,0.15);
+	min-width: 280px;
+}
+
+.ncbw-upgrade-cta .dashicons {
+	font-size: 36px;
+	width: 36px;
+	height: 36px;
+	color: #764ba2;
+	margin-bottom: 8px;
+}
+
+.ncbw-upgrade-cta h3 {
+	margin: 0 0 8px;
+	font-size: 18px;
+	color: #1d2327;
+}
+
+.ncbw-upgrade-cta p {
+	color: #555;
+	margin-bottom: 16px;
+	font-size: 13px;
+}
+
+.ncbw-upgrade-cta .button-primary {
+	font-size: 14px;
+	padding: 6px 18px;
+	height: auto;
+	line-height: 1.6;
+}

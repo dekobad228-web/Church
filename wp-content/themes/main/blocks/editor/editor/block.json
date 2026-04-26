@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/editor",
+  "title": "Визуальный редактор",
+  "category": "editor",
+  "icon": "edit",
+  "supports": {
+    "mode": false
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  }
+}

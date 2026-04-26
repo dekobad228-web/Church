@@ -1,0 +1,14 @@
+@use "@/scss/abstracts" as *;
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: $red;
+}
+
+.container {
+    width: 100%;
+    max-width: 1760px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
