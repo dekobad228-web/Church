@@ -4,7 +4,7 @@
 
 ---
 
-## 1 Локальная установка
+## 1. Локальная установка
 
 ### 1.1 Сначала обновляем систему:
 
@@ -78,7 +78,7 @@ ddev launch
 ```
 
 Вручную: https://church.ddev.site
-## 2 Структура проекта
+## 2. Структура проекта
 
 ```bash
 .ddev — окружение проекта
@@ -91,7 +91,7 @@ Vite конфигурация
 package.json
 db.sql — база данных
 ```
-## 3 Основные команды
+## 3. Основные команды
 
 DDEV:
 ```bash
@@ -103,11 +103,14 @@ ddev import-db --file=db/db.sql
 ddev export-db --file=db/db.sql
 ```
 
-## 4 Взаимодействие с git
+## 4. Взаимодействие с git
 
 ```bash
-git pull
-git add .
+git branch - текущая ветка
+git switch backend - переключение на ветку backend
+git switch frontend - переключение на ветку frontend
+git pull origin main - выгрузка последний изменений из main
+git add . - добавить все изменения
 git commit -m "update (ифнормация о комите)"
-git push
+git push - запушить все изменения
 ```
