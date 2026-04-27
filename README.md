@@ -67,7 +67,7 @@ npm run dev
 ### 1.3 База данных
 Импорт базы данных:
 ```bash
-ddev import-db --file=db/db.sql
+ddev import-db --file=_db/db.sql
 ```
 
 ### 1.4 Запуск проекта
@@ -99,8 +99,8 @@ ddev start
 ddev stop
 ddev restart
 ddev launch
-ddev import-db --file=db/db.sql
-ddev export-db --file=db/db.sql
+ddev import-db --file=_db/db.sql
+ddev export-db --file=_db/db.sql
 ```
 
 ## 4. Взаимодействие с git
