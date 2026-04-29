@@ -5,7 +5,7 @@ Donate link: https://nocatwp.com
 Tags: category base, category slug, category url, category permalinks
 Requires at least: 5.0
 Tested up to: 6.9
-Stable tag: 1.5.4
+Stable tag: 1.5.5
 License: GPLv2 or later
 
 This plugin removes the mandatory 'Category Base' from your category permalinks. It's compatible with WPML.
@@ -154,6 +154,10 @@ Privacy policy: https://trsplugins.com/privacy-policy/
 1. Look Ma, No Category Base!
 
 == Changelog ==
+
+= 1.5.5 =
+* Fixed: Frontend stylesheet now only loaded for logged-in users, improving performance for guests
+* Maintenance and stability improvements
 
 = 1.5.4 =
 * Updated: Refreshed plugin description with full feature overview and admin menu documentation
