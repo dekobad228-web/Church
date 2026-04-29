@@ -7,7 +7,7 @@ node_modules/
 dist/
 
 # Composer
-vendor/
+wp-content/themes/main/vendor/
 
 # Локальный конфиг
 .env
