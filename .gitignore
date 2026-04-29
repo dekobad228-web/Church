@@ -20,10 +20,3 @@ wp-config-ddev.php
 .ddev/.importdb*
 .ddev/.webimageBuild
 .ddev/docker-compose.*
-
-# Logs
-*.log
-
-# uploads
-wp-content/uploads/*
-!wp-content/uploads/.gitkeep
