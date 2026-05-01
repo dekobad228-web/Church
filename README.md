@@ -92,13 +92,29 @@ package.json
 db.sql — база данных
 ```
 ## 3. Основные команды
-
-DDEV:
+В корне проекта
+Запуск локальный среды разработки:
 ```bash
 ddev start
-ddev stop
-ddev restart
+```
+
+Открыть ссылку сайта:
+```bash
 ddev launch
+```
+Остановить локальную среду разработки:
+
+```bash
+ddev stop
+```
+
+Перезапустить локальную среду разработки:
+```bash
+ddev restart
+```
+
+Импорт и экспорт базы данных:
+```bash
 ddev import-db --file=_db/db.sql
 ddev export-db --file=_db/db.sql
 ```
