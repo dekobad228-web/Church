@@ -86,14 +86,26 @@ function get_file_info($file_info)
 }
 
 add_action('init', function () {
-    if (function_exists('acf_add_options_page')) {
-        acf_add_options_page([
-            'page_title' => 'Общие настройки сайта',
-            'menu_title' => 'Общие настройки сайта',
-            'menu_slug'  => 'general-settings',
-            'capability' => 'edit_posts',
-            'icon_url'   => 'dashicons-admin-generic',
-            'redirect'   => true
-        ]);
-    }
+	if (function_exists('acf_add_options_page')) {
+		acf_add_options_page([
+			'page_title' => 'Общие настройки сайта',
+			'menu_title' => 'Общие настройки сайта',
+			'menu_slug'  => 'general-settings',
+			'capability' => 'edit_posts',
+			'icon_url'   => 'dashicons-admin-generic',
+			'redirect'   => true
+		]);
+	}
 });
+
+function register_menu()
+{
+	register_nav_menus([
+		'header_menu_left' => 'Меню шапки слева',
+		'header_menu_right' => 'Меню шапки справа',
+		'footer_col_one' => 'Меню подвала (колонка 1)',
+		'footer_col_two' => 'Меню подвала (колонка 2)',
+		'footer_col_three' => 'Меню подвала (колонка 3)',
+	]);
+}
+register_menu();
