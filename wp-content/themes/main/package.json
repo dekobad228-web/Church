@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "alpinejs": "^3.15.11",
-    "micromodal": "^0.6.1"
+    "micromodal": "^0.6.1",
+    "roboto-fontface": "^0.10.0"
   }
 }
