@@ -1,4 +1,7 @@
 <?php
+/** dev or prod */
+define('THEME_ENV', 'dev');
+
 require_once __DIR__ . '/vendor/autoload.php';
 
 require_once 'blocks/init.php';
