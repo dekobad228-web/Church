@@ -1,0 +1,29 @@
+@use "@/scss/abstracts" as *;
+
+.section-post-one {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: clampFluid(30);
+        width: 100%;
+        overflow-x: hidden;
+
+    }
+
+    &__list {
+        display: flex;
+        flex-flow: row;
+        gap: clampFluid(15, 30, 380, 1200);
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+
+        &::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    }
+
+
+}
