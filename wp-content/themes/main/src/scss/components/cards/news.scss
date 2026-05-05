@@ -1,0 +1,32 @@
+@use "@/scss/abstracts" as *;
+
+.card-news {
+    display: flex;
+    flex-flow: column;
+    gap: clampFluid(16);
+    border: 1px solid $black-20;
+    flex-shrink: 0;
+    width: clampFluid(250, 370, 380, 1200);
+
+    &__box {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(24);
+        padding: 0 clampFluid(20) clampFluid(16) clampFluid(20);
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__img {
+        height: clampFluid(160, 240, 380, 1200);
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__date {
+        color: $black-60;
+    }
+}
