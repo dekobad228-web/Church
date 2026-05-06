@@ -1,23 +1,27 @@
 @use "@/scss/abstracts" as *;
 
-.card-about {
+.card-activity {
     display: flex;
     flex-flow: column;
-    gap: 10px;
+    border: 1px solid $black-20;
+    flex-shrink: 0;
+    width: 100%;
     transition: .3s ease;
 
     &:hover {
-        .card-about__title {
+        .card-activity__title {
             color: $black-60;
         }
     }
 
+
     &__image {
-        height: clampFluid(230, 290, 380, 1920);
+        max-height: 320px;
     }
 
     &__title {
         color: $black;
+        padding: 16px 20px;
         transition: .3s ease;
     }
 }
