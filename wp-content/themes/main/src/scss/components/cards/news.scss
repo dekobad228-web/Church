@@ -7,6 +7,13 @@
     border: 1px solid $black-20;
     flex-shrink: 0;
     width: clampFluid(250, 370, 380, 1200);
+    transition: .3s ease;
+
+    &:hover {
+        .card-news__title {
+            color: $black-60;
+        }
+    }
 
     &__box {
         display: flex;
@@ -24,6 +31,7 @@
 
     &__title {
         color: $black;
+        transition: .3s ease;
     }
 
     &__date {
