@@ -32,6 +32,33 @@ switch ($type):
                 </div>
             </div>
         </section>
+    <?php
+        break;
+    case "two":
+    ?>
+        <section class="section-form-two">
+            <div class="container">
+                <div class="section-form-two__block">
+                    <div class="section-form-two__content">
+                        <h2 class="h1-400 section-form-two__title">
+                            <?= $group['title']; ?>
+                        </h2>
+                        <p class="p2-400 section-form-two__text">
+                            <?= $group['text']; ?>
+                        </p>
+                        <?php if ($group['btn_text']) : ?>
+                            <button class="btn btn--dark section-form-two__btn">
+                                <?= $group['btn_text']; ?>
+                            </button>
+                        <?php endif; ?>
+
+                    </div>
+                    <?php if ($group['image']) : ?>
+                        <img src="<?= $group['image']['url']; ?>" alt="<?= $group['image']['alt']; ?>" class="section-form-two__image">
+                    <?php endif; ?>
+                </div>
+            </div>
+        </section>
 <?php
         break;
 endswitch;
