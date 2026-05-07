@@ -1,22 +1,14 @@
 @use "@/scss/abstracts" as *;
 
 .section-banner-one {
-    margin-top: 170px;
+    display: flex;
+    flex-flow: column;
+    gap: clampFluid(46);
 
     &__block {
         display: flex;
         flex-flow: column;
-        gap: clampFluid(46);
-        align-items: center;
-        justify-content: center;
-    }
-
-    &__content {
-        display: flex;
-        flex-flow: column;
         gap: clampFluid(16);
-        max-width: clampFluid(820);
-        width: 100%;
         align-items: center;
     }
 
@@ -33,7 +25,7 @@
         color: $black-60;
     }
 
-    &__img {
+    &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -47,8 +39,14 @@
         &--mob {
             display: none;
         }
+    }
 
-        @media (max-width: 480px) {
+    @media (max-width: 480px) {
+        &__title {
+            @include textFluid(h1, 400);
+        }
+
+        &__image {
             &--desk {
                 display: none;
             }

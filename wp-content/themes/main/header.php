@@ -10,4 +10,5 @@
 
 <body>
   <?php get_template_part("partials/header") ?>
+  <?php get_template_part('partials/mobile-menu'); ?>
   <main>

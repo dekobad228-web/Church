@@ -1,8 +1,8 @@
 {
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
-    "name": "acf/forms",
-    "title": "Форма обратной связи",
+    "name": "acf/notes",
+    "title": "Записки",
     "category": "content",
     "icon": "admin-post",
     "supports": {

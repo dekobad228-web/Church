@@ -1,3 +1,5 @@
 import "@/style/fonts.scss";
 import '@/main.scss';
-console.log("Катя лучшая на свете +++");
+
+import '@/js/banner.js';
+import '@/js/burger.js';

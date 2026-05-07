@@ -4,12 +4,10 @@ $group = get_field($type);
 
 switch ($type):
     case "one":
-        $number = $group['number'];
-
         $args = array(
             'post_type' => 'post',
             'category_name' => 'news',
-            'posts_per_page' => $number ?? 3,
+            'posts_per_page' => $group['number'] ?? 3,
             'post_status' => 'publish',
             'orderby' => 'date',
             'order'   => 'DESC',
@@ -21,9 +19,11 @@ switch ($type):
         <section class="section-post-one">
             <div class="container">
                 <div class="section-post-one__block">
-                    <h2 class="h1-400 section-post-one__title">
-                        <?= $group['title']; ?>
-                    </h2>
+                    <?php if ($group['title']) : ?>
+                        <h2 class="h1-400 section-post-one__title">
+                            <?= $group['title']; ?>
+                        </h2>
+                    <?php endif; ?>
                     <div class="section-post-one__list">
                         <?php if ($query->have_posts()) :
                             while ($query->have_posts()) : $query->the_post(); ?>
@@ -44,7 +44,7 @@ switch ($type):
         $args = array(
             'post_type' => 'post',
             'category_name' => 'about',
-            'posts_per_page' => -1,
+            'posts_per_page' => $group['number'] ?? 3,
             'post_status' => 'publish',
             'orderby' => 'date',
             'order'   => 'ASC',
@@ -54,9 +54,11 @@ switch ($type):
         <section class="section-post-two">
             <div class="container">
                 <div class="section-post-two__block">
-                    <h2 class="h1-400 section-post-two__title">
-                        <?= $group['title']; ?>
-                    </h2>
+                    <?php if ($group['title']) : ?>
+                        <h2 class="h1-400 section-post-two__title">
+                            <?= $group['title']; ?>
+                        </h2>
+                    <?php endif; ?>
                     <div class="section-post-two__list">
                         <?php if ($query->have_posts()) :
                             while ($query->have_posts()) : $query->the_post(); ?>
@@ -77,7 +79,7 @@ switch ($type):
         $args = array(
             'post_type' => 'post',
             'category_name' => 'activity',
-            'posts_per_page' => -1,
+            'posts_per_page' => $group['number'] ?? 4,
             'post_status' => 'publish',
             'orderby' => 'date',
             'order'   => 'ASC',
@@ -87,9 +89,11 @@ switch ($type):
         <section class="section-post-three">
             <div class="container">
                 <div class="section-post-three__block">
-                    <h2 class="h1-400 section-post-three__title">
-                        <?= $group['title']; ?>
-                    </h2>
+                    <?php if ($group['title']) : ?>
+                        <h2 class="h1-400 section-post-three__title">
+                            <?= $group['title']; ?>
+                        </h2>
+                    <?php endif; ?>
                     <div class="section-post-three__list">
                         <?php if ($query->have_posts()) :
                             while ($query->have_posts()) : $query->the_post(); ?>

@@ -1,6 +1,6 @@
 @use "@/scss/abstracts" as *;
 
-.section-form-one {
+.section-notes-one {
     position: relative;
 
     &__background {
@@ -44,5 +44,11 @@
     &__text {
         color: $white;
         max-width: 800px;
+    }
+
+    @media (max-width: 480px) {
+        &__btn {
+            width: 100%;
+        }
     }
 }

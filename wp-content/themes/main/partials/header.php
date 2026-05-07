@@ -28,8 +28,7 @@ $info = get_field("info", "option");
             'menu_class'     => 'header__nav header__nav--right',
             'fallback_cb'    => false
         ]); ?>
-        <div id="burger" class="burger header__burger">
-            <span></span>
+        <div class="burger header__burger">
             <span></span>
             <span></span>
         </div>

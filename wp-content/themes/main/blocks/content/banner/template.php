@@ -4,9 +4,9 @@ $group = get_field($type);
 switch ($type):
     case "one":
 ?>
-        <section class="section-banner-one">
-            <div class="section-banner-one__block">
-                <div class="section-banner-one__content">
+        <section class="banner section-banner-one">
+            <div class="container">
+                <div class="section-banner-one__block">
                     <?php if ($group['title']) : ?>
                         <h1 class="h0-400 section-banner-one__title">
                             <?= $group['title']; ?>
@@ -18,18 +18,18 @@ switch ($type):
                         </div>
                     <?php endif; ?>
                 </div>
-                <div class="section-banner-one__img">
-                    <?php if ($group['media_img_desk'] || $group['media_img_mob']) : ?>
-                        <?php if ($group['media_img_desk']) : ?>
-                            <img src="<?= $group['media_img_desk']['url']; ?>" alt="<?= $group['media_img_desk']['alt']; ?>" class="section-banner-one__img section-banner-one__img--desk">
-                        <?php endif; ?>
-                        <?php if ($group['media_img_mob']) : ?>
-                            <img src="<?= $group['media_img_mob']['url']; ?>" alt="<?= $group['media_img_mob']['alt']; ?>" class="section-banner-one__img section-banner-one__img--mob">
-                        <?php elseif ($group['media_img_desk']) : ?>
-                            <img src="<?= $group['media_img_desk']['url']; ?>" alt="<?= $group['media_img_desk']['alt']; ?>" class="section-banner-one__img section-banner-one__img--mob">
-                        <?php endif; ?>
+            </div>
+            <div class="section-banner-one__image">
+                <?php if ($group['image'] || $group['image_mob']) : ?>
+                    <?php if ($group['image']) : ?>
+                        <img src="<?= $group['image']['url']; ?>" alt="<?= $group['image']['alt']; ?>" class="section-banner-one__image section-banner-one__image--desk">
                     <?php endif; ?>
-                </div>
+                    <?php if ($group['image_mob']) : ?>
+                        <img src="<?= $group['image_mob']['url']; ?>" alt="<?= $group['image_mob']['alt']; ?>" class="section-banner-one__image section-banner-one__image--mob">
+                    <?php elseif ($group['image']) : ?>
+                        <img src="<?= $group['image']['url']; ?>" alt="<?= $group['image']['alt']; ?>" class="section-banner-one__image section-banner-one__image--mob">
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
         </section>
 <?php

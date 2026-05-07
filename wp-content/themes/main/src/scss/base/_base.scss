@@ -5,6 +5,10 @@ body {
     background-color: $white;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 section {
     margin-bottom: clampFluid(70, 120);
 }
