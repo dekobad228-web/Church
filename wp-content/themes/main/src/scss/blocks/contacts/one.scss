@@ -1,0 +1,62 @@
+@use "@/scss/abstracts" as *;
+
+.section-contacts-one {
+    &__block {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(15, 30);
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(8, 16);
+    }
+
+    &__socials {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__map {
+        flex: 1;
+        max-width: 800px;
+        width: 100%;
+        height: clampFluid(270, 550, 380, 1920);
+        border-radius: 15px;
+        overflow: hidden;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__block {
+            flex-flow: column;
+            align-items: flex-start;
+        }
+
+        &__map {
+            flex: auto;
+        }
+    }
+}
+
+.ymaps3--map-copyrights {
+    display: none !important;
+}
