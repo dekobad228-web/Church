@@ -1,0 +1,249 @@
+@use "@/scss/abstracts" as *;
+
+.section-notes-two {
+    &__block {
+        position: relative;
+        max-width: 1170px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: clampFluid(15, 30);
+        padding: clampFluid(20, 80) clampFluid(20, 100);
+        background-color: #FFFFFF;
+    }
+
+    &__icon {
+        position: absolute;
+        top: clampFluid(-35, -50);
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        height: clampFluid(55, 110);
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__form {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(20, 35);
+    }
+
+    &__selects {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: clampFluid(15, 30);
+    }
+
+    &__select {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        &:last-child {
+            flex: 2;
+        }
+
+        &-name {
+            color: $black-70;
+        }
+    }
+
+    &__dropdown {
+        position: relative;
+        width: 100%;
+
+        &:hover {
+            .section-notes-two__dropdown-body {
+                opacity: 1;
+                max-height: 1000px;
+            }
+        }
+
+        &-head {
+            padding: 12px 24px;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid $black-20;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        &-name {
+            color: $black;
+        }
+
+        &-icon {
+            width: 24px;
+            height: 24px;
+            object-fit: none;
+            object-position: center;
+        }
+
+        &-body {
+            width: 100%;
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            top: 100%;
+            position: absolute;
+            transition: .3s ease;
+            background-color: #FFFFFF;
+            z-index: 1;
+        }
+
+        &-content {
+            display: flex;
+            flex-flow: column;
+            gap: 6px;
+            border: 1px solid $black-20;
+            border-top: 0;
+            padding: 6px 12px;
+        }
+
+        &-item {
+            padding: 6px 12px;
+            background-color: transparent;
+            transition: .3s ease;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $black;
+
+                .section-notes-two__dropdown-text {
+                    color: #FFFFFF;
+                }
+            }
+        }
+
+        &-text {
+            color: $black;
+            transition: .3s ease;
+        }
+    }
+
+    &__line {
+        width: 100%;
+        height: 1px;
+        background: $black-20;
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    &__commemoration {
+        color: $black;
+    }
+
+    &__columns {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: clampFluid(25, 50);
+    }
+
+    &__fields {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    &__field {
+        width: 100%;
+        position: relative;
+        padding: 10px 0 10px 45px;
+        border-bottom: 1px solid $black-20;
+
+        &-number {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            color: $black;
+        }
+
+        &-input {
+            width: 100%;
+            border: none;
+            color: $black;
+            background-color: transparent;
+
+            &:focus,
+            &:focus-visible {
+                border: 0;
+                background-color: transparent;
+            }
+
+            &::placeholder {
+                color: $black-40;
+            }
+        }
+    }
+
+    &__personal {
+        &--mob {
+            display: none;
+        }
+    }
+
+    &__donation {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        &-price {
+            color: $black;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__columns {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__selects {
+            flex-flow: column;
+        }
+
+        &__select {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__personal {
+            &--desk {
+                display: none;
+            }
+
+            &--mob {
+                display: flex;
+            }
+        }
+
+        &__donation {
+            flex-flow: column;
+            align-items: flex-start;
+
+            &-btn {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -2,6 +2,7 @@
 
 /** dev or prod */
 define('THEME_ENV', 'dev');
+define('AJAX_PATH', '/wp-admin/admin-ajax.php');
 
 require_once __DIR__ . '/vendor/autoload.php';
 

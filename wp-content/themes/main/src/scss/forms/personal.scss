@@ -1,0 +1,61 @@
+@use "@/scss/abstracts" as *;
+
+.personal {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    gap: clampFluid(10, 16);
+
+    &__checkbox {
+        position: relative;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        flex-shrink: 0;
+        background-color: transparent;
+        border: 1px solid $main;
+        transition: .3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__input {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 1;
+
+        &:checked+.personal__icon {
+            opacity: 1;
+        }
+    }
+
+    &__icon {
+        width: 80%;
+        height: 80%;
+        opacity: 0;
+        transition: .3s ease;
+
+        path {
+            fill: transparent;
+            stroke: $main;
+        }
+    }
+
+    &__text {
+        opacity: .5;
+        color: $black-60;
+    }
+
+    &__link {
+        text-decoration: underline;
+        transition: .3s ease;
+
+        &:hover {
+            color: $black;
+        }
+    }
+}

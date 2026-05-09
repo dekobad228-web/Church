@@ -77,7 +77,7 @@ export default class Map {
             },
             [
                 new ymaps3.YMapDefaultSchemeLayer({
-                    theme: "dark"
+                    theme: "light"
                 }),
                 new ymaps3.YMapDefaultFeaturesLayer({ zIndex: 1800 }),
             ]
