@@ -4,6 +4,8 @@ namespace App;
 
 use App\Vite\Assets;
 use App\Mailer\Ajax;
+use App\Entity\Registry;
+use App\Schedule\Schedule;
 
 class Init
 {
@@ -11,5 +13,7 @@ class Init
     {
         Assets::init();
         Ajax::init();
+        Registry::init();
+        Schedule::init();
     }
 }
