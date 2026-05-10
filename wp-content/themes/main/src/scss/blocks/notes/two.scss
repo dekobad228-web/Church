@@ -19,6 +19,7 @@
         transform: translateX(-50%);
         width: auto;
         height: clampFluid(55, 110);
+        user-select: none;
     }
 
     &__title {

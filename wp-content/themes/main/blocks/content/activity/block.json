@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/activity",
+  "title": "О храме",
+  "category": "content",
+  "icon": "admin-post",
+  "supports": {
+    "mode": false
+  },
+  "acf": {
+    "mode": "edit",
+    "renderTemplate": "template.php"
+  }
+}

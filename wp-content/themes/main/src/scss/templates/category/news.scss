@@ -1,0 +1,23 @@
+@use "@/scss/abstracts" as *;
+
+.category-news {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clampFluid(30);
+
+    .card-news {
+        width: 100%;
+
+        &__img {
+            height: clampFluid(200, 240, 380, 1920);
+        }
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 480px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

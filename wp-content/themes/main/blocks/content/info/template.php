@@ -41,6 +41,48 @@ switch ($type):
                 </div>
             </div>
         </section>
+    <?php
+        break;
+    case "two": ?>
+        <section class="section-info-two">
+            <div class="container">
+                <div class="section-info-two__block">
+                    <?php if ($group['title']) : ?>
+                        <h2 class="h1-400 section-info-two__title">
+                            <?= $group['title']; ?>
+                        </h2>
+                    <?php endif; ?>
+                    <div class="section-info-two__list">
+                        <?php foreach ($group['events'] as $event) : ?>
+                            <div class="section-info-two__card">
+                                <?php if ($event['event_image']) : ?>
+                                    <img src="<?= $event['event_image']['url'] ?>" class="section-info-two__image" alt="<?= $event['event_image']['alt'] ?>">
+                                <?php endif; ?>
+                                <?php if ($event['event_name'] || $event['event_text']) : ?>
+                                    <div class="section-info-two__box">
+                                        <?php if ($event['event_name']) : ?>
+                                            <h4 class="h4-400 section-info-two__name">
+                                                <?= $event['event_name'] ?>
+                                            </h4>
+                                        <?php endif; ?>
+                                        <?php if ($event['event_text']) : ?>
+                                            <p class="p3-400 section-info-two__text">
+                                                <?= $event['event_text'] ?>
+                                            </p>
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if ($event['event_sign_text']) : ?>
+                                    <p class="p3-400 section-info-two__sign">
+                                        <?= $event['event_sign_text'] ?>
+                                    </p>
+                                <?php endif; ?>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </section>
 <?php
         break;
 endswitch;

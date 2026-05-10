@@ -7,11 +7,13 @@
     padding: 15px;
     border-radius: 250px;
     background-color: transparent;
-    border: 1px solid $main;
+    border: 1px solid $black-20;
+    user-select: none;
     transition: .3s ease;
 
     &:hover {
-        background-color: $black-70;
+        background-color: $black-20;
+        border: 1px solid $main;
     }
 
     &__image {

@@ -1,0 +1,42 @@
+@use "@/scss/abstracts" as *;
+
+.section-activity-shrines {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(20, 30);
+    }
+
+    &__card {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: clampFluid(10, 40);
+    }
+
+    &__image {
+        width: 200px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    &__name {
+        color: $black;
+    }
+
+    @media (max-width: 480px) {
+        &__card {
+            flex-flow: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+}

@@ -61,16 +61,14 @@ $info = get_field("info", "option");
                             </div>
                         </div>
                         <?php if (!empty($info['socials'])) : ?>
-                            <div class="footer-top__icons">
-                                <div class="footer-top__socials">
-                                    <?php foreach ($info['socials'] as $value) : ?>
-                                        <a href="<?= $value['link']; ?>" class="ui-icon footer-top__social">
-                                            <?php if ($value['icon']) : ?>
-                                                <img src="<?= $value['icon']['url'] ?>" class="ui-icon__image footer-top__social" alt="<?= $value['name']; ?>">
-                                            <?php endif; ?>
-                                        </a>
-                                    <?php endforeach; ?>
-                                </div>
+                            <div class="footer-top__socials">
+                                <?php foreach ($info['socials'] as $value) : ?>
+                                    <a href="<?= $value['link']; ?>" class="ui-icon footer-top__social">
+                                        <?php if ($value['icon']) : ?>
+                                            <img src="<?= $value['icon']['url'] ?>" class="ui-icon__image footer-top__social" alt="<?= $value['name']; ?>">
+                                        <?php endif; ?>
+                                    </a>
+                                <?php endforeach; ?>
                             </div>
                         <?php endif; ?>
                     </div>
