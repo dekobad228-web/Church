@@ -1,12 +1,12 @@
 <?php
-
-/** dev or prod */
 define('THEME_ENV', 'dev');
 define('AJAX_PATH', '/wp-admin/admin-ajax.php');
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/app/Helpers.php';
 
 require_once 'blocks/init.php';
+
 
 \App\Init::init();
 
@@ -165,3 +165,10 @@ function register_menu()
 	]);
 }
 register_menu();
+
+function sendResponse($response_arr)
+{
+	$result = json_encode($response_arr);
+	echo $result;
+	wp_die();
+}
