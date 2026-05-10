@@ -1,0 +1,101 @@
+@use "@/scss/abstracts" as *;
+
+.section-about-history {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(25, 50);
+    }
+
+    &__card {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        position: relative;
+        gap: clampFluid(15, 30);
+    }
+
+    &__years {
+        max-width: 240px;
+        color: $black;
+        text-align: right;
+        flex-shrink: 0;
+        width: 100%;
+    }
+
+    &__marker {
+        display: inline-block;
+        margin: 25px 0;
+        width: 14px;
+        height: 14px;
+        background: $main;
+        border-radius: 200px;
+        flex-shrink: 0;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(8);
+        max-width: 845px;
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: row;
+        gap: clampFluid(20, 30);
+
+        &--right {
+            flex-flow: row;
+        }
+
+        &--left {
+            flex-flow: row-reverse;
+        }
+    }
+
+    &__text {
+        color: $black-70;
+    }
+
+    &__picture {
+        display: flex;
+        flex-flow: column;
+        gap: 8px;
+        max-width: 260px;
+        flex-shrink: 0;
+    }
+
+    &__image {
+        height: auto;
+    }
+
+    &__sign {
+        color: $black-40;
+    }
+
+    @media (max-width: 1024px) {
+        &__box {
+            flex-flow: column;
+        }
+
+        &__card {
+            flex-flow: column;
+            padding-left: 35px;
+        }
+
+        &__years {
+            text-align: left;
+        }
+
+        &__marker {
+            position: absolute;
+            left: 0;
+        }
+    }
+}

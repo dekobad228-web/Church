@@ -196,6 +196,15 @@
             gap: 16px;
         }
 
+        &__social {
+            border: 1px solid $white-20;
+
+            &:hover {
+                background-color: $white-20;
+                border: 1px solid $main;
+            }
+        }
+
         @media (max-width: 1024px) {
             &__block {
                 flex-flow: column;
