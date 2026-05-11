@@ -1,0 +1,33 @@
+@use "@/scss/abstracts" as *;
+
+.modal-index {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        max-height: 90vh;
+        height: 410px;
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: clampFluid(30, 60) clampFluid(50, 100);
+        background-color: $white;
+        box-shadow: 0px 8px 10.9px 0px #151C1433;
+        gap: 15px;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__form {
+        display: flex;
+        flex-flow: column;
+        gap: 12px;
+    }
+}

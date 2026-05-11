@@ -1,0 +1,41 @@
+@use "@/scss/abstracts" as *;
+
+.base-modal {
+
+    .modal {
+
+        &__overlay {
+            background: rgba(0, 0, 0, 0.7);
+            will-change: transform, opacity;
+        }
+
+        &__close {
+            border-radius: 500px;
+
+        }
+    }
+
+    &[aria-hidden="false"] {
+        .modal {
+            &__overlay {
+                animation: mmfadeIn 0.5s cubic-bezier(0, 0, 0.2, 1);
+            }
+
+            &__container {
+                animation: mmslideIn 0.5s cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+    }
+
+    &[aria-hidden="true"] {
+        .modal {
+            &__overlay {
+                animation: mmfadeOut 0.5s cubic-bezier(0, 0, 0.2, 1);
+            }
+
+            &__container {
+                animation: mmslideOut 0.5s cubic-bezier(0, 0, 0.2, 1);
+            }
+        }
+    }
+}
