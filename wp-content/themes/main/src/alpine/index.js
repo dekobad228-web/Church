@@ -8,8 +8,11 @@ Alpine.plugin(collapse);
 import PhoneInputMask from "./components/PhoneInputMask";
 Alpine.data("PhoneInputMask", PhoneInputMask);
 
-import Modal from "./components/Modal";
-Alpine.data("Modal", Modal)
+// import Modal from "./components/Modal";
+// Alpine.data("Modal", Modal)
+
+import OpenModal from "./components/OpenModal/OpenModal"
+Alpine.data("OpenModal", OpenModal)
 
 import FancyboxGallery from "./components/FancyboxGallery";
 Alpine.data("FancyboxGallery", FancyboxGallery)
