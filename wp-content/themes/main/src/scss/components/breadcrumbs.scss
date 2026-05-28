@@ -1,0 +1,43 @@
+@use "@/scss/abstracts" as *;
+
+.breadcrumbs {
+    margin-top: clampFluid(100, 150);
+    margin-bottom: 30px;
+
+    .container {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    a {
+        @include textFluid(p2, 400);
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: 7px;
+        color: $black;
+        transition: .3s ease;
+
+        &:hover {
+            color: $black-60;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 13.5px;
+            background-color: $black-20;
+            transition: .3s ease;
+        }
+    }
+
+    .current-item {
+        @include textFluid(p2, 400);
+        color: $black-40;
+        cursor: default;
+    }
+}

@@ -1,0 +1,139 @@
+@use "@/scss/abstracts" as *;
+
+.mobile-menu {
+    position: fixed;
+    top: clampFluid(86, 116, 380, 1920);
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    background: $white;
+    z-index: 100;
+    transition: right 0.4s ease;
+    border-top: 1px solid $black-70;
+    border-left: 1px solid $black-70;
+
+    &.active {
+        right: 0;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0 !important;
+            height: 0 !important;
+        }
+    }
+
+    &__block {
+        padding-top: 20px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 30px;
+        padding-bottom: 20px;
+        overflow-y: auto;
+        flex: 1;
+    }
+
+    &__menu {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(15, 45);
+    }
+
+    &__nav {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: clampFluid(15, 45);
+        transition: .3s ease;
+
+        li {
+            a {
+                @include textFluid(p2, 400);
+                color: $black;
+                white-space: nowrap;
+                transition: .3s ease;
+
+                &:hover {
+                    color: $black-70;
+                }
+            }
+        }
+
+        .menu-item-has-children {
+            position: relative;
+
+            >a {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                gap: 4px;
+
+                &::after {
+                    content: "";
+                    display: block;
+                    background-image: url(@/media/icons/arrow.svg);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    width: 12px;
+                    height: 12px;
+                    transition: .3s ease;
+                }
+
+            }
+
+            .sub-menu {
+                padding-top: 15px;
+                padding-left: 20px;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            &:hover>a::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__tel {
+        position: relative;
+        display: block;
+        color: $black;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background: $black;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            color: $black-70;
+
+            &::after {
+                background: $black-70;
+            }
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: 10px;
+    }
+}

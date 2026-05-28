@@ -1,0 +1,54 @@
+@use "@/scss/abstracts" as *;
+
+.section-notes-one {
+    position: relative;
+
+    &__background {
+        position: absolute;
+        inset: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
+
+
+    &__block {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 480px;
+        width: 100%;
+        gap: clampFluid(30, 60);
+
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(16);
+        align-items: center;
+    }
+
+    &__title {
+        color: $white;
+    }
+
+    &__text {
+        color: $white;
+        max-width: 800px;
+    }
+
+    @media (max-width: 480px) {
+        &__btn {
+            width: 100%;
+        }
+    }
+}

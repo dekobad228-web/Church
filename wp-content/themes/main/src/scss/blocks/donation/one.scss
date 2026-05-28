@@ -1,0 +1,48 @@
+@use "@/scss/abstracts" as *;
+
+.section-donation-one {
+    &__block {
+        display: flex;
+        flex-flow: row;
+        width: 100%;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(31);
+        align-items: flex-start;
+        width: 100%;
+        max-width: 550px;
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__text {
+        color: $black-70;
+        font-style: italic;
+    }
+
+    &__image {
+        max-width: 470px;
+    }
+
+    @media (max-width: 768px) {
+
+        &__block {
+            flex-flow: column;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__btn {
+            width: 100%;
+        }
+    }
+}

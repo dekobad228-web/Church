@@ -1,0 +1,103 @@
+@use "@/scss/abstracts" as *;
+
+.section-contacts-one {
+    &__block {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(15, 30);
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__info {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    &__box {
+        max-width: 380px;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    &__address,
+    &__work-time,
+    &__tel {
+        color: $black;
+    }
+
+    &__tel {
+        position: relative;
+        transition: .3s ease;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $black;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__map {
+        flex: 1;
+        max-width: 570px;
+        width: 100%;
+        height: clampFluid(270, 530, 380, 1920);
+        overflow: hidden;
+
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ymaps3--main-engine-container {
+            -webkit-filter: grayscale(100%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__block {
+            flex-flow: column;
+            align-items: flex-start;
+        }
+
+        &__map {
+            flex: auto;
+        }
+    }
+}
+
+.ymaps3--map-copyrights {
+    display: none !important;
+}

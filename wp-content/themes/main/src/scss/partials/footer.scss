@@ -1,5 +1,275 @@
-/* Подвал */
+@use "@/scss/abstracts" as *;
 
-.footer{
-    
+.footer {
+    background-color: $black;
+    display: flex;
+    flex-flow: column;
+
+    &-top {
+        border-bottom: 1px solid $white-20;
+
+        &__block {
+            display: flex;
+            flex-flow: row;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            padding: clampFluid(36) 0 clampFluid(21) 0;
+            gap: 30px;
+        }
+
+        &__logo {
+            max-width: 310px;
+        }
+
+        &__columns {
+            display: flex;
+            flex-flow: row;
+            gap: clampFluid(15, 30);
+
+
+        }
+
+        &__col {
+            &--one {
+                max-width: 105px;
+
+                >.menu-item-has-children {
+                    >a {
+                        color: $white;
+                        border-bottom: 1px solid $white-20;
+                        display: inline-block;
+                        padding-bottom: 8px;
+                        margin-bottom: 8px;
+                        width: 100%;
+                        @include textFluid(p2, 500);
+                        transition: .3s ease;
+
+                        &:hover {
+                            color: $white-80;
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    li {
+                        margin-bottom: 12px;
+
+                        a {
+                            color: $white-90;
+                            @include textFluid(p3, 400);
+                            transition: .3s ease;
+
+                            &:hover {
+                                color: $white-30;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--two {
+                max-width: 140px;
+
+                >.menu-item-has-children {
+                    >a {
+                        color: $white;
+                        font-weight: 500;
+                        border-bottom: 1px solid $white-20;
+                        display: inline-block;
+                        padding-bottom: 8px;
+                        margin-bottom: 8px;
+                        width: 100%;
+                        @include textFluid(p2, 500);
+                        transition: .3s ease;
+
+                        &:hover {
+                            color: $white-80;
+                        }
+                    }
+                }
+
+                .sub-menu {
+                    li {
+                        margin-bottom: 12px;
+
+                        a {
+                            color: $white-90;
+                            font-weight: 400;
+                            transition: .3s ease;
+
+                            &:hover {
+                                color: $white-30;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &--three {
+                max-width: 140px;
+                display: flex;
+                flex-flow: column;
+                gap: clampFluid(14);
+
+                >.menu-item-object-page,
+                .menu-item-object-category {
+                    a {
+                        @include textFluid(p2, 500);
+                        color: $white;
+                        transition: .3s ease;
+
+                        &:hover {
+                            color: $white-80;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            display: flex;
+            flex-flow: column;
+            max-width: 270px;
+        }
+
+        &__title {
+            color: $white;
+            border-bottom: 1px solid $white-20;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+            width: 100%;
+            @include textFluid(p2, 500);
+        }
+
+        &__info {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            gap: clampFluid(20);
+        }
+
+        &__contacts {
+            display: flex;
+            flex-flow: column;
+            gap: clampFluid(12);
+        }
+
+        &__box {
+            display: flex;
+            flex-flow: column;
+            gap: 4px;
+        }
+
+        &__address {
+            color: $white-90;
+        }
+
+        &__clock {
+            font-size: clampFluid(10, 12);
+            color: $white-90;
+            font-weight: 400;
+            opacity: .7;
+        }
+
+        &__tels {
+            display: flex;
+            flex-flow: column;
+            align-items: flex-start;
+            gap: 4px;
+        }
+
+        &__tel {
+            color: $white-90;
+            transition: .3s ease;
+
+            &:hover {
+                color: $white-30;
+            }
+        }
+
+        &__socials {
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &__social {
+            border: 1px solid $white-20;
+
+            &:hover {
+                background-color: $white-20;
+                border: 1px solid $main;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            &__block {
+                flex-flow: column;
+            }
+
+            &__columns {
+                max-width: 100%;
+            }
+
+            &__col {
+
+                &--one,
+                &--two,
+                &--three {
+                    max-width: 100%;
+                }
+            }
+
+            &__right {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &-bottom {
+        &__block {
+            padding: 15px 0 20px 0;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        &__copyright {
+            font-size: 12px;
+            color: $white-90;
+            font-weight: 400;
+            opacity: .7;
+
+        }
+
+        &__right {
+            display: flex;
+            flex-flow: row;
+            gap: 30px;
+        }
+
+        &__link {
+            text-decoration: underline;
+            font-size: 12px;
+            color: $white-90;
+            font-weight: 400;
+            transition: .3s ease;
+            opacity: .7;
+
+            &:hover {
+                color: $white-30;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            &__block {
+                flex-flow: column;
+            }
+
+        }
+    }
 }

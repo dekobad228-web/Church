@@ -1,0 +1,23 @@
+@use "@/scss/abstracts" as *;
+
+.card-about {
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    transition: .3s ease;
+
+    &:hover {
+        .card-about__title {
+            color: $black-60;
+        }
+    }
+
+    &__image {
+        height: clampFluid(230, 290, 380, 1920);
+    }
+
+    &__title {
+        color: $black;
+        transition: .3s ease;
+    }
+}

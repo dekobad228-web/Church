@@ -1,0 +1,39 @@
+@use "@/scss/abstracts" as *;
+
+.single-activity {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(20, 40);
+    }
+
+    &__top {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        gap: clampFluid(30);
+    }
+
+    &__left {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        gap: clampFluid(30);
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    &__image {
+        flex: 1;
+        min-width: 0;
+    }
+
+    @media (max-width: 768px) {
+        &__top {
+            flex-flow: column;
+        }
+    }
+}

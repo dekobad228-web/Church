@@ -1,0 +1,60 @@
+@use "@/scss/abstracts" as *;
+
+.section-banner-one {
+    display: flex;
+    flex-flow: column;
+    gap: clampFluid(46);
+
+    &__block {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(16);
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &__text {
+        text-align: center;
+        max-width: clampFluid(575);
+        width: 100%;
+        color: $black-60;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        inset: 0;
+
+        &--desk {
+            display: block;
+        }
+
+        &--mob {
+            display: none;
+        }
+    }
+
+    @media (max-width: 480px) {
+        &__title {
+            @include textFluid(h1, 400);
+        }
+
+        &__image {
+            &--desk {
+                display: none;
+            }
+
+            &--mob {
+                display: block;
+            }
+        }
+    }
+
+}

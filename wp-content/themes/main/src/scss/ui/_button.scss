@@ -1,0 +1,33 @@
+@use "@/scss/abstracts" as *;
+
+.btn {
+    @include textFluid(p2, 500);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    padding: 12px 24px;
+    text-align: center;
+    height: clampFluid(40, 50);
+    color: inherit;
+    text-decoration: none !important;
+    border: 2px solid $main;
+    background-color: transparent;
+    user-select: none;
+    cursor: pointer;
+    transition: .3s ease;
+
+    &:hover {
+        background-color: $main;
+        color: $black;
+    }
+
+    &--light {
+        color: $white;
+    }
+
+    &--dark {
+        color: $black;
+    }
+}

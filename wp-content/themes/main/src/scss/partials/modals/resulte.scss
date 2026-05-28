@@ -1,0 +1,36 @@
+@use "@/scss/abstracts" as *;
+
+.resulte-modal {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        max-width: 578px;
+        max-height: 90vh;
+        height: clampFluid(160, 300);
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+        padding: clampFluid(25, 40) clampFluid(16, 40);
+        background-color: $main;
+        box-shadow: 0px 8px 10.9px 0px #151C1433;
+        gap: 15px;
+    }
+
+    &__title {
+        color: $white;
+    }
+
+    &__icon {
+        width: clampFluid(40, 60, 360, 1920);
+        height: clampFluid(40, 60, 360, 1920);
+
+        &-success {
+            use {
+                fill: $black;
+            }
+        }
+    }
+}

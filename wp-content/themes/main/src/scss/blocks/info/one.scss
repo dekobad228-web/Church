@@ -1,0 +1,67 @@
+@use "@/scss/abstracts" as *;
+
+.section-info-one {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        gap: clampFluid(20, 45);
+        align-items: center;
+    }
+
+    &__title {
+        text-align: center;
+        color: $black;
+    }
+
+    &__content {
+        display: flex;
+        flex-flow: column;
+        gap: 20px;
+    }
+
+    &__events {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clampFluid(15, 30);
+    }
+
+    &__card {
+        display: flex;
+        flex-flow: row;
+        gap: 20px;
+        align-items: center;
+
+        &-image {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-flow: column;
+        gap: 6px;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 290px;
+
+        &-name {
+            color: $black;
+        }
+
+        &-text {
+            color: $black-60;
+        }
+    }
+
+    @media (max-width: 768px) {
+        &__events {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &__box {
+            max-width: 100%;
+        }
+
+    }
+}

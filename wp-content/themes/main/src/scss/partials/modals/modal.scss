@@ -1,0 +1,130 @@
+@use "@/scss/abstracts" as *;
+
+.modal-open {
+    width: 100vw;
+    overflow: hidden;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow: hidden;
+
+    &.is-open {
+        display: block;
+    }
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close {
+        position: absolute;
+        z-index: 5;
+        right: clampFluid(15, 20);
+        top: clampFluid(15, 20);
+        width: clampFluid(22, 30);
+        height: clampFluid(22, 30);
+        cursor: pointer;
+        transition: .3s ease;
+
+        svg {
+            width: 100%;
+            height: 100%;
+            transition: .3s ease;
+
+            use {
+                fill: $white;
+                transition: .3s ease;
+            }
+        }
+
+        &:hover {
+            svg {
+                opacity: .5;
+            }
+        }
+    }
+
+    &__container {
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        will-change: transform, opacity;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    &__scroll {
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            border: 1px solid transparent;
+            background-clip: content-box;
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+        }
+    }
+
+}
+
+@keyframes mmfadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10%);
+    }
+}

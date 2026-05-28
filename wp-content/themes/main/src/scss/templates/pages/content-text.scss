@@ -1,0 +1,127 @@
+@use "@/scss/abstracts" as *;
+
+.content-text {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: $black;
+
+        &:not(:last-child) {
+            margin-bottom: clampFluid(20);
+        }
+    }
+
+    h1 {
+        @include textFluid(h1, 400);
+    }
+
+    h2 {
+        @include textFluid(h2, 400);
+    }
+
+    h3 {
+        @include textFluid(h3, 400);
+    }
+
+    h4 {
+        @include textFluid(h4, 400);
+    }
+
+    p {
+        @include textFluid(p2, 400);
+        color: $black-70;
+
+        &:not(:last-child) {
+            margin-bottom: clampFluid(15);
+        }
+    }
+
+    a {
+        @include textFluid(p2, 400);
+        color: $black;
+        text-decoration: underline;
+        transition: .3s ease;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    li {
+        @include textFluid(p2, 400);
+        color: $black;
+
+        &::marker {
+            color: $main;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: clampFluid(20);
+        }
+    }
+
+    img {
+        display: block;
+        margin: clampFluid(60) auto;
+        max-width: 100%;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    ul,
+    ol {
+        padding-left: clampFluid(30);
+
+        &:not(:last-child) {
+            margin-bottom: clampFluid(40);
+        }
+    }
+
+    ul {
+        list-style: disc;
+    }
+
+    ol {
+        list-style: decimal;
+
+    }
+
+    .table {
+        overflow: auto;
+        border-radius: 0 clampFluid(50) 0 0;
+    }
+
+    table {
+        min-width: 100%;
+        border: 0;
+        border-spacing: 0;
+        border-collapse: collapse;
+        overflow: hidden;
+
+        th {
+            color: $black;
+            text-align: left;
+            text-transform: uppercase;
+            @include textFluid(h3, 400);
+        }
+
+        td {
+            @include textFluid(p2, 400);
+        }
+
+        td,
+        th {
+            padding: clampFluid(20) clampFluid(30);
+        }
+    }
+
+    > :first-child {
+        margin-top: 0 !important;
+    }
+
+    > :last-child {
+        margin-bottom: 0 !important;
+    }
+}

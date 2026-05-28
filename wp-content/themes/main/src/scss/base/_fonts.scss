@@ -1,3 +1,18 @@
-html {
-    font-family: Arial, Helvetica, sans-serif;
+@use "@/scss/abstracts" as *;
+
+@each $key, $value in $text-style {
+    @each $name, $weight in $font-weight {
+        .#{$key}-#{$name} {
+            @include textFluid($key, $weight);
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: "Jun";
 }

@@ -1,0 +1,31 @@
+@use "@/scss/abstracts" as *;
+
+.section-post-three {
+    &__block {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        gap: clampFluid(20, 45);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: clampFluid(15, 30);
+        width: 100%;
+        align-items: center;
+    }
+
+    &__title {
+        color: $black;
+    }
+
+    @media (max-width: 768px) {
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+    }
+
+
+}
