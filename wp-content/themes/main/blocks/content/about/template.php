@@ -3,11 +3,16 @@ $type = get_field('type');
 $group = get_field($type);
 switch ($type):
     case "history":
+        $nbsp = html_entity_decode("&nbsp;");
 ?>
         <section class="section-about-history">
             <div class="container">
                 <div class="section-about-history__block">
                     <?php foreach ($group as $history) : ?>
+                        <?php
+                        $text = str_replace($nbsp, ' ', $history['text']);
+                        $image_sign = str_replace($nbsp, ' ', $history['image_sign']);
+                        ?>
                         <div class="section-about-history__card">
                             <?php if ($history['years']) : ?>
                                 <h2 class="h2-400 section-about-history__years">
@@ -22,17 +27,17 @@ switch ($type):
                                     </h4>
                                 <?php endif; ?>
                                 <div class="section-about-history__box section-about-history__box--<?= $history['image_position'] ?>">
-                                    <?php if ($history['text']) : ?>
+                                    <?php if ($text) : ?>
                                         <div class="content-text section-about-history__text">
-                                            <?= $history['text'] ?>
+                                            <?= $text ?>
                                         </div>
                                     <?php endif; ?>
                                     <?php if ($history['image']) : ?>
                                         <div class="section-about-history__picture">
                                             <img src="<?= $history['image']['url'] ?>" class="section-about-history__image" alt="<?= $history['image']['alt'] ?>">
-                                            <?php if ($history['image_sign']) : ?>
+                                            <?php if ($image_sign) : ?>
                                                 <p class="p3-400 section-about-history__sign">
-                                                    <?= $history['image_sign'] ?>
+                                                    <?= $image_sign ?>
                                                 </p>
                                             <?php endif; ?>
                                         </div>
