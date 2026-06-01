@@ -16,7 +16,7 @@ class Ajax
     {
         $data = [
             'name' => $_POST['name'] ?? '',
-            'email' => $_POST['email'] ?? '',
+            'mail' => $_POST['mail'] ?? '',
             'tel' => $_POST['tel'] ?? '',
         ];
         Mailer::send(
