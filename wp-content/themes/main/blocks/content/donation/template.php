@@ -19,7 +19,7 @@ switch ($type):
                             </p>
                         <?php endif; ?>
                         <?php if ($group['btn_text']) : ?>
-                            <button class="btn btn--dark section-donation-one__btn" x-data="OpenModal('modal-index')">
+                            <button class="btn btn--dark section-donation-one__btn">
                                 <?= $group['btn_text']; ?>
                             </button>
                         <?php endif; ?>

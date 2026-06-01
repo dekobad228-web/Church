@@ -8,5 +8,6 @@ import '@/js/banner.js'
 import '@/js/burger.js'
 import '@/js/datepicker.js'
 import '@/js/schedule.js'
+import '@/js/line.js'
 
 import '@/alpine'

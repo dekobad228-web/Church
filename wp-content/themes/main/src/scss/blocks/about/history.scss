@@ -24,6 +24,8 @@
     }
 
     &__marker {
+        position: relative;
+        z-index: 2;
         display: inline-block;
         margin: 25px 0;
         width: 14px;
@@ -31,6 +33,36 @@
         background: $main;
         border-radius: 200px;
         flex-shrink: 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: var(--marker-gap, 0px);
+            background-color: #0F372F33;
+            z-index: 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: var(--marker-fill, 0px);
+            background-color: #EEBC6B;
+            z-index: 1;
+            transition: height 0.15s ease-out;
+        }
+
+        &:last-of-type::before,
+        &:last-of-type::after {
+            display: none;
+        }
     }
 
     &__content {

@@ -9,6 +9,7 @@
     }
 
     &__top {
+        width: 100%;
         display: flex;
         flex-flow: row;
         align-items: flex-end;
@@ -16,10 +17,12 @@
     }
 
     &__title {
+        max-width: 300px;
         color: $black;
     }
 
     &__description {
+        max-width: 460px;
         color: $black-60;
     }
 

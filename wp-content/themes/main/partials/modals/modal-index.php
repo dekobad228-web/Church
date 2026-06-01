@@ -6,9 +6,6 @@ $donations = get_field("donations", "option");
         <div class="container modal__container">
             <div class="modal-index__block">
                 <button class="modal__close" data-micromodal-close="">
-                    <svg class="icon" data-micromodal-close="">
-                        <use href="<?= bloginfo("template_url") ?>/static/images/sprite.svg#close"></use>
-                    </svg>
                 </button>
                 <div class="modal-index__top">
                     <h2 class="h2-400 modal-index__title">

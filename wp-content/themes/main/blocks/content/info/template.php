@@ -54,7 +54,7 @@ switch ($type):
                     <?php endif; ?>
                     <div class="section-info-two__list">
                         <?php foreach ($group['events'] as $event) : ?>
-                            <div class="section-info-two__card">
+                            <a href="<?= $event['event_sign_link'] ?>" class="section-info-two__card">
                                 <?php if ($event['event_image']) : ?>
                                     <img src="<?= $event['event_image']['url'] ?>" class="section-info-two__image" alt="<?= $event['event_image']['alt'] ?>">
                                 <?php endif; ?>
@@ -77,7 +77,7 @@ switch ($type):
                                         <?= $event['event_sign_text'] ?>
                                     </p>
                                 <?php endif; ?>
-                            </div>
+                            </a>
                         <?php endforeach; ?>
                     </div>
                 </div>

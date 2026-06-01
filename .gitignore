@@ -1,22 +1,107 @@
-# OS
+
+# OS / IDE
 .DS_Store
 Thumbs.db
+.idea/
+.vscode/
+*.swp
 
-# Node
-node_modules/
-dist/
-
-# Composer
-wp-content/themes/main/vendor/
-
-# Локальный конфиг
+# Local configs
 .env
 .env.*
+!.env.example
+
 wp-config.php
 wp-config-ddev.php
+wp-config-local.php
 
-# файлы DDEV
-.ddev/db_snapshots
+# DDEV
+.ddev/
+!.ddev/
+!.ddev/config.yaml
+!.ddev/config.*.yaml
+!.ddev/docker-compose.*.yaml
+!.ddev/php/
+!.ddev/nginx_full/
+!.ddev/apache/
+!.ddev/commands/
+!.ddev/homeadditions/
+
+.ddev/db_snapshots/
 .ddev/.importdb*
 .ddev/.webimageBuild
-.ddev/docker-compose.*
+.ddev/.webimageBuild/
+.ddev/.downloads/
+.ddev/.ssh-auth.sock
+
+# WordPress core
+wp-admin/
+wp-includes/
+
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+# WordPress content
+wp-content/plugins/
+
+# Медиа и служебные файлы
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+
+# Бэкапы / миграции / логи
+wp-content/backup*/
+wp-content/backups*/
+wp-content/ai1wm-backups/
+wp-content/updraft/
+wp-content/wflogs/
+
+debug.log
+wp-content/debug.log
+*.log
+
+# Node / Composer
+node_modules/
+wp-content/themes/*/node_modules/
+wp-content/plugins/*/node_modules/
+
+vendor/
+wp-content/themes/*/vendor/
+wp-content/plugins/*/vendor/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+
+# DB dumps / archives / backups
+_db/
+*.sql
+*.sql.gz
+*.sql.zip
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.bak
+*.backup
+
+# Temporary files
+.tmp/
+temp/
+.cache/

@@ -54,6 +54,7 @@
                 .sub-menu {
                     li {
                         margin-bottom: 12px;
+                        opacity: .8;
 
                         a {
                             color: $white-90;
@@ -92,6 +93,7 @@
                 .sub-menu {
                     li {
                         margin-bottom: 12px;
+                        opacity: .8;
 
                         a {
                             color: $white-90;
@@ -113,7 +115,7 @@
                 gap: clampFluid(14);
 
                 >.menu-item-object-page,
-                .menu-item-object-category {
+                .menu-item  {
                     a {
                         @include textFluid(p2, 500);
                         color: $white;

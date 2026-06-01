@@ -12,7 +12,6 @@ class Mailer
         $mail = new PHPMailer(true);
 
         try {
-            // SMTP
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
@@ -21,14 +20,11 @@ class Mailer
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            // Encoding
             $mail->CharSet = 'UTF-8';
 
-            // Sender
             $mail->setFrom('your@gmail.com', 'Site');
             $mail->addAddress($data);
 
-            // Content
             $mail->isHTML(true);
             $mail->Subject = $subject;
 

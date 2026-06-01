@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 1000;
     background-color: $white;
 
     &__block {
@@ -83,6 +83,7 @@
                 opacity: 0;
                 z-index: 10;
                 background-color: $white;
+                box-shadow: 0px 4px 15px 0px #0000000D;
                 transition: .3s ease;
 
                 &::before {

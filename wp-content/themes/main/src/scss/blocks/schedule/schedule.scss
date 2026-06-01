@@ -135,6 +135,10 @@
         flex-flow: column;
         align-items: flex-start;
         gap: 16px;
+
+        p {
+            color: $black;
+        }
     }
 
     &__card {
