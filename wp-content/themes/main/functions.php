@@ -1,5 +1,5 @@
 <?php
-define('THEME_ENV', 'dev');
+define('THEME_ENV', 'prod');
 define('AJAX_PATH', '/wp-admin/admin-ajax.php');
 
 require_once __DIR__ . '/vendor/autoload.php';
