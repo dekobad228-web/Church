@@ -19,6 +19,7 @@ class Ajax
             'mail' => $_POST['mail'] ?? '',
             'tel' => $_POST['tel'] ?? '',
         ];
+        
         Mailer::send(
             'Новая заявка с сайта',
             $data,
